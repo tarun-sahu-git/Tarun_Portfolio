@@ -1,0 +1,249 @@
+/* ============================================
+   SINGLE-ROW PERFECTLY ALIGNED FOOTER CSS
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  background: #111827; /* Dark modern primary color */
+  color: #e5e7eb;
+  padding-top: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 5-COLUMN HORIZONTAL GRID */
+.footer-container {
+  width: 92%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.9fr 0.9fr 1.2fr;
+  gap: 25px;
+  padding-bottom: 25px;
+  align-items: start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* UNIFIED HEADINGS ALIGNMENT */
+.col-heading {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  height: 38px; /* Fixed height for pixel-perfect baseline alignment across columns */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 106, 0, 0.3);
+}
+
+/* BRAND COLUMN SPECIAL STYLING */
+/* BRAND COLUMN WITH CIRCULAR LOGO & VERTICAL ALIGNMENT */
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps alignment aligned with other columns on desktop */
+}
+
+/* Circular Logo Image Wrapper */
+.footer-avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, #ff6a00, #ff9800); /* Glowing orange gradient border */
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #111827;
+}
+
+.brand-name {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+.brand-tagline {
+  color: #9ca3af;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Mobile & Tablet Center Alignment */
+@media (max-width: 600px) {
+  .brand-col {
+    align-items: center;
+    text-align: center;
+  }
+}
+  
+
+/* LINK LISTS */
+.col-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.col-links a,
+.location-text {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 12.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.25s ease;
+}
+
+.col-links a:hover {
+  color: #ff6a00;
+  transform: translateX(4px);
+}
+
+.ext-icon {
+  font-size: 9px;
+  opacity: 0.6;
+}
+
+/* SOCIAL MEDIA BAR */
+.footer-social-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #ff6a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links a:hover {
+  background: linear-gradient(135deg, #ff6a00, #ff9800);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 106, 0, 0.3);
+}
+
+/* BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+  background: #0b0f17;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  color: #9ca3af;
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-bottom p span {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.heart {
+  color: #ef4444;
+  font-size: 11px;
+}
+
+.scroll-top {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6a00, #ff9800);
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 106, 0, 0.2);
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 106, 0, 0.4);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .col-heading {
+    justify-content: center;
+  }
+
+  .brand-col .footer-logo {
+    justify-content: center;
+  }
+
+  .col-links a,
+  .location-text {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
