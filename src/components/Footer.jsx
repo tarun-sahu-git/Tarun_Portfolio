@@ -47,7 +47,7 @@ function Footer() {
 <div className="footer-col brand-col">
   <div className="footer-avatar-wrapper">
     <img
-      src="\documents\\Tarun.jpeg" // Replace with your image path (e.g. "/assets/profile.jpg")
+      src="\documents\\Tarun.png" // Replace with your image path (e.g. "/assets/profile.jpg")
       alt="Tarun Sahu Logo"
       className="footer-avatar-img"
     />

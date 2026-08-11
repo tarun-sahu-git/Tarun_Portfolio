@@ -123,7 +123,7 @@ function About() {
             <div className="about-image-border"></div>
             <div className="about-image">
               <img
-                src="/documents/Tarun.jpeg"
+                src="/documents/Tarun.png"
                 alt="Tarun - Full Stack Developer Profile"
               />
             </div>
